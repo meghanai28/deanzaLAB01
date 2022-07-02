@@ -52,7 +52,7 @@ public class Test {
 	public boolean isPrimeRecur (int num, int divisor)
 	{
 		
-		if(num<=2) // if the number is 2 or 1, return true if number is 2, and false if number is 1.
+		if(num<=3) // if the number is 2 or 1 or 3, return true if number is 2 or 3, and false if number is 1.
 		{
 			return !(num==1);
 		}
