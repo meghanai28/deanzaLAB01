@@ -14,7 +14,7 @@ public class Test {
 		
 		for(int i =0; i<size; i++)  // iterate through each element in loop
 		{
-			if( arr[i] % 2 == 0 || arr[i] == 1) // if the arr[i] is either 1 or divisible by 2, we know its not a prime number. so return false
+			if( arr[i] % 2 == 0 || arr[i] == 1) // if the arr[i] is either divisble by 1 or 2, we know its not a prime number. so return false
 			{
 				return false;
 			}
