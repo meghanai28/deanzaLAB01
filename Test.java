@@ -14,11 +14,15 @@ public class Test {
 		
 		for(int i =0; i<size; i++)  // iterate through each element in loop
 		{
-			if( arr[i] % 2 == 0 || arr[i] == 1) // if the arr[i] is either divisble by 1 or 2, we know its not a prime number. so return false
+			if(arr[i]<=3) // if the number is 2 or 1 or 3, return true if number is 2 or 3, and false if number is 1.
+			{
+				return !(arr[i]==1);
+			}
+			
+			if( arr[i] % 2 == 0) // if number is divisible by 2, that means the number is not prime and thus we return false. else we only have to check if arr[i] is divisible by odd numbers.
 			{
 				return false;
 			}
-			
 			for(int j=3; j<=Math.sqrt(arr[i]); j+=2) // since we only enter this loop if arr[i] is not divisble by 2, we can iterate through odd numbers.
       // we only have to go up to the sqrt of arr[i], since if a number is prime, atleast one divisor will be less than sqrt(arr[i]).
 			{
