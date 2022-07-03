@@ -2,14 +2,14 @@ public class Test {
 
 	public static void main (String [] args)
 	{
-		Test test = new Test();
+		
 		int [] a = {871};
 		
 		System.out.println(test.IsArrayPrimeIter(a,a.length));
 		System.out.println(test.IsArrayPrimeRecur(a,a.length));
 	}
 	
-	public boolean IsArrayPrimeIter(int [] arr, int size)
+	public static boolean IsArrayPrimeIter(int [] arr, int size)
 	{
 		
 		for(int i =0; i<size; i++)  // iterate through each element in loop
@@ -35,7 +35,7 @@ public class Test {
 		return true; // if the for loops all exit without any returns, return true.
 	}
 	
-	public boolean IsArrayPrimeRecur(int[] arr, int size)
+	public static boolean IsArrayPrimeRecur(int[] arr, int size)
 	{
 		
 		if(size == 0) // if the size is 0, that means we found that all numbers are prime. (i.e: this is base case)
@@ -53,7 +53,7 @@ public class Test {
 		
 	}
 	
-	public boolean isPrimeRecur (int num, int divisor)
+	private static boolean isPrimeRecur (int num, int divisor)
 	{
 		
 		if(num<=3) // if the number is 2 or 1 or 3, return true if number is 2 or 3, and false if number is 1.
