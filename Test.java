@@ -2,7 +2,7 @@ public class Test {
 
 	public static void main (String [] args)
 	{
-		ArrayPrime test = new ArrayPrime();
+		Test test = new Test();
 		int [] a = {871};
 		
 		System.out.println(test.IsArrayPrimeIter(a,a.length));
