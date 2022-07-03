@@ -9,6 +9,37 @@ public class Test {
 		System.out.println(IsArrayPrimeRecur(a,a.length));
 	}
 	
+	/*
+	 * Algorithm IsArrayPrimeIter (array, n)
+	 * 		
+	 * 		This algorithm checks if an array contains all prime numbers or not. 
+	 * 		Pre : array - an array of integers
+	 * 			  n - the true size of array
+	 * 		Post:
+	 * 		Return: true or false
+	 * 
+	 * 		i=0
+	 * 		loop (i < size)		
+	 * 			if(array[i] <= 3)
+	 * 				return !(array[i] equals 1)
+	 * 			end if
+	 * 			if (array[i] % 2 equals 0)
+	 * 				return false
+	 * 			end if
+	 * 			int j=3
+	 * 			loop(j <= sqrt(array[i]))
+	 * 				
+	 * 				if(array[i]% j equals 0)
+	 * 					return false;
+	 * 				end if
+	 * 				j+=2
+	 * 			end loop
+	 * 		i++
+	 * 		end loop
+	 * 		return true
+	 * 
+	 * end IsArrayPrimeIter
+	 */
 	public static boolean IsArrayPrimeIter(int [] arr, int size)
 	{
 		
@@ -35,6 +66,25 @@ public class Test {
 		return true; // if the for loops all exit without any returns, return true.
 	}
 	
+	/*
+	 * Algorithm IsArrayPrimeRecur (array, n)
+	 * 		
+	 * 		This algorithm checks recursively if an array contains all prime numbers or not. 
+	 * 		Pre : array - an array of integers
+	 * 			  n - the true size of array
+	 * 		Post:
+	 * 		Return: true or false
+	 * 
+	 * 		if(n equals 0)
+	 * 			return true
+	 * 		end if
+	 * 		if(array[n-1] is not prime) // helper method to check if value in array is prime
+	 * 			return false
+	 * 		end if
+	 * 		return isArrayPrimeRecur (array, n-1)
+	 * 		
+	 * end IsArrayPrimeRecur
+	 */
 	public static boolean IsArrayPrimeRecur(int[] arr, int size)
 	{
 		
@@ -53,6 +103,28 @@ public class Test {
 		
 	}
 	
+	/*
+	 * Algorithm IsPrimeRecur (number, divisor)
+	 * 		
+	 * 		This algorithm checks recursively if a number is prime or not. 
+	 * 		Pre : number - integer to be checked
+	 * 		 	  divisor - integer to check if is factor of number
+	 * 		Post:
+	 * 		Return: true or false
+	 * 
+	 * 		if(number <=3)
+	 * 			return !(number equals 1)
+	 * 		end if
+	 * 		if((number % divisor equals 0) or (number % 2 equals 0))
+	 * 			return false;
+	 * 		end if
+	 * 		if(divisor> sqrt(number))
+	 * 			return true;
+	 * 		end if
+	 * 		return isPrimeRecur(num, divisor + 2)
+	 * 
+	 * end IsPrimeRecur
+	 */
 	private static boolean isPrimeRecur (int num, int divisor)
 	{
 		
