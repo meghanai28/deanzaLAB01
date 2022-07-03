@@ -5,8 +5,8 @@ public class Test {
 		
 		int [] a = {871};
 		
-		System.out.println(test.IsArrayPrimeIter(a,a.length));
-		System.out.println(test.IsArrayPrimeRecur(a,a.length));
+		System.out.println(IsArrayPrimeIter(a,a.length));
+		System.out.println(IsArrayPrimeRecur(a,a.length));
 	}
 	
 	public static boolean IsArrayPrimeIter(int [] arr, int size)
