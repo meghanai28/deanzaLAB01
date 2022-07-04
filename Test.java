@@ -74,7 +74,7 @@ public class Test {
 			{
 				return false;
 			}
-			for(int j=3; j<=Math.sqrt(arr[i]); j+=2) // since we only enter this loop if arr[i] is not divisble by 2, we can iterate through odd numbers.
+			for(int j=3; j<=(Math.sqrt(arr[i])+1); j+=2) // since we only enter this loop if arr[i] is not divisble by 2, we can iterate through odd numbers.
       // we only have to go up to the sqrt of arr[i], since if a number is prime, atleast one divisor will be less than sqrt(arr[i]).
 			{
 				if(arr[i]%j == 0) // check if number is divisible by using modulo
@@ -159,7 +159,7 @@ public class Test {
 			return false;
 		}
 		
-		if(divisor > Math.sqrt(num)) // if number the divisor is incremented to the point it is greater than Math.sqrt(num) that means the number is a prime number. so we return true.
+		if(divisor > Math.sqrt(num)+1) // if number the divisor is incremented to the point it is greater than Math.sqrt(num) that means the number is a prime number. so we return true.
 		{
 			return true;
 		}
