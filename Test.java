@@ -3,29 +3,7 @@ public class Test {
 	public static void main (String [] args)
 	{
 		
-		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Please enter a size for your array of integers (no more than 16):");
-        	int size = input.nextInt();
-       	        input.nextLine();
-        	int array[] = new int[size];
-
-        	System.out.println("Please enter " + size + " numbers seperated by spaces "
-        		+ "(ranging from 1 to 9999 inclusive) :");
-
-        	String numbers = input.nextLine();
-       
-        
-       		String[] stringArr = numbers.split(" ");
-        
-        	for(int i =0; i<16 && i<size; i++)
-        	{
-        		array[i] = Integer.parseInt(stringArr[i]);
-        	}
-		
-		
-		System.out.println(IsArrayPrimeIter(array,size));
-		System.out.println(IsArrayPrimeRecur(array,size));
 		
 	}
 	
